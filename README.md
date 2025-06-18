@@ -166,6 +166,17 @@ Start the application
 python src/app/app.py
 ```
 
+### Minimal phone call agent
+
+If you do not need the web frontend, you can run a simplified service that only
+connects your Azure Communication Services phone number with the Azure Realtime API:
+
+```bash
+python scripts/simple_agent.py
+```
+
+The script expects the same environment variables used by `src/app/app.py`.
+
 To make inbound calls work for local development, you need to [set up another Event Grid System Topic](#forward-inbound-calls-to-your-application) and set the Web Socket endpoint to your ngrok domain (e.g. `https://1234-567-123-456-789/acs/incoming`).
 
 ## Customization
